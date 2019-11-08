@@ -134,3 +134,38 @@
 
 //  }
 //  console.log(findPrix(arr))
+
+
+/**
+ * 020 有效的括号
+ * 
+ */
+
+ let str = '(){}['
+
+ function isValid(s){
+     let judge = {
+         '[':']',
+         '{':'}',
+         '(':')'
+     }
+
+     let arr = s.split('')
+     let stack = []
+
+     for(let i=0;i<arr.length;i++){
+         if(arr[i] === judge[stack[stack.length - 1]]){
+            stack.pop()
+         } else {
+             stack.push(arr[i])
+         }
+     }
+
+     if(stack.length){
+         return false
+     }
+
+     return true
+ }
+
+ console.log(isValid(str))
