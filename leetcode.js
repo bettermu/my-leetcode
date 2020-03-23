@@ -141,31 +141,107 @@
  * 
  */
 
- let str = '(){}['
+//  let str = '(){}['
 
- function isValid(s){
-     let judge = {
-         '[':']',
-         '{':'}',
-         '(':')'
-     }
+//  function isValid(s){
+//      let judge = {
+//          '[':']',
+//          '{':'}',
+//          '(':')'
+//      }
 
-     let arr = s.split('')
-     let stack = []
+//      let arr = s.split('')
+//      let stack = []
 
-     for(let i=0;i<arr.length;i++){
-         if(arr[i] === judge[stack[stack.length - 1]]){
-            stack.pop()
-         } else {
-             stack.push(arr[i])
-         }
-     }
+//      for(let i=0;i<arr.length;i++){
+//          if(arr[i] === judge[stack[stack.length - 1]]){
+//             stack.pop()
+//          } else {
+//              stack.push(arr[i])
+//          }
+//      }
 
-     if(stack.length){
-         return false
-     }
+//      if(stack.length){
+//          return false
+//      }
 
-     return true
- }
+//      return true
+//  }
 
- console.log(isValid(str))
+//  console.log(isValid(str))
+
+
+
+/**
+ * 696 计算二进制子串
+ * 
+ */
+
+
+//  var arr = [1,1,2,2,2,2]
+//  var min = 10
+//  var result =[]
+
+   
+
+//    for(var i=0 ,len = arr.length,tmp = [];i<len;i++){
+//      tmp.push(arr[i])
+//      for(var j=i+1;j<len - 1;j++){
+//        //如果相同
+//         if(arr[i]===arr[j]){
+//           tmp.push(arr[j])
+//           console.log(tmp)
+//         } else {
+//           if(min > tmp.length){
+//             min = tmp.length
+//             console.log(min)
+//           }
+//           result.push(tmp.slice())
+//           tmp = []
+//           i = j
+//           break;
+//         }
+//        //如果不相同
+//      }
+//    }
+
+//    console.log(result)
+
+/**
+ * 605 种花问题
+ * 
+ */
+
+// var arr = [0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,1]
+
+// var n = 4
+
+// function can(arr,n) {
+//   var m = 0
+//   for(var i=0;i<arr.length;i++){
+//     if(i === 0){
+//       if(arr[i]===0 && arr[i+1]===0){
+//         arr[i] = 1
+//         m = m+1
+//       }
+//     }else if(i===arr.length -1){
+//       if(arr[i-1]===0 && arr[i]===0){
+//         arr[i] = 1
+//         m = m+1
+//       }
+//     } else {
+//       if(arr[i]===0 && arr[i-1]===0 && arr[i+1]===0 ){
+//         arr[i] = 1
+//         m = m+1
+//       }
+//     }
+//   }
+//    if(m >= n){
+//      console.log("可以种下啦")
+//    } else {
+//      console.log("ohh,种不下这么多")
+//    }
+// }
+
+// can(arr,n)
+ 
