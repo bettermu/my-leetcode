@@ -212,9 +212,34 @@
  * 
  */
 
-// var arr = [0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,1]
+//  var arr = [0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,1]
 
-// var n = 4
+//  var n = 4
+
+//  function can(arr,n){
+//    var m =0
+//    for(var i =0;i<arr.length-1;i++){
+//      if(arr[i]===0){
+//        if( i===0 && arr[1]===0){
+//          m++
+//          i+=1
+//        }else if(arr[i-1]===0 && arr[i+1]===0) {
+//         m++
+//         i+=1
+      
+//       }
+
+//      }
+//    }
+//    console.log(m)
+//    if(m >= n){
+//           console.log("可以种下啦")
+//         } else {
+//           console.log("ohh,种不下这么多")
+//         }
+//  }
+
+//  can(arr,n)
 
 // function can(arr,n) {
 //   var m = 0
@@ -244,4 +269,22 @@
 // }
 
 // can(arr,n)
+
+
+/** 
+ * 026 删除排序数组中的重复项,并返回新数组的长度
+*/
  
+// var arr = [0,0,0,1,1,1,2,2,2]
+
+// var delRepeat = function(arr){
+//   for(var i=0;i<arr.length;i++){
+//     if(arr[i]===arr[i+1]){
+//       arr.splice(i,1)
+//       i--
+//     }
+//   }
+//   return arr.length
+// }
+
+// console.log(delRepeat(arr))
