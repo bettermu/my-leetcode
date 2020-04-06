@@ -334,3 +334,49 @@
 //  }
 
 //  console.log(strStr(haystack,needle))
+
+/**
+ * 029 搜索插入位置  循环  二分法
+ */
+
+//  var arr = [1,3,5,6]
+//  var target = 2
+
+ // 1  循环破解
+
+//  function researchArr(arr,target){
+//   for(var i=0;i<arr.length;i++){
+//     if(arr[i]>=target){
+//       return i
+//     }
+//   }
+//   return arr.length
+//  }
+
+//  console.log(researchArr(arr,target))
+
+//2 二分法破解
+
+// function researchArr(arr,target){
+//   var left = 0
+//   var right = arr.length
+
+//   while(left<right){
+//     var middle = Math.floor((left + right)/2)
+//     if(arr[middle] === target){
+//       return middle
+//     }else if(arr[middle]<target){
+//       left = middle + 1
+//     }else {
+//       right = middle - 1
+//     }
+//   }
+//   return left
+  
+// }
+
+// console.log(researchArr(arr,target))
+
+ 
+
+ 
