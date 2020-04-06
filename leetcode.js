@@ -288,3 +288,49 @@
 // }
 
 // console.log(delRepeat(arr))
+
+
+/**
+ * 027 移除数组中的元素
+ */
+
+// var nums = [0,1,2,2,3,0,4,2]
+// var val = 2
+
+// function removeRepeat(arr,val){
+//   for(var i=0;i<arr.length;i++){
+//     if(arr[i]==val){
+//       arr.splice(i,1)
+//       i--
+//     }
+//   }
+//   return arr
+// }
+
+// console.log(removeRepeat(nums,2))
+
+
+/**
+ * 028 实现strStr  字符串有substring的方法用来截取
+ */
+
+
+//  var haystack = "hello"
+//  var needle = "ll"
+
+//  function strStr(source,target){
+
+//   if(!source &&!target){
+//     return 0
+//   }
+
+//    for(var i=0;i<source.length;i++){
+//      if(source.substring(i,i+target.length)===target){
+//        return i
+//      }
+//    }
+
+//    return -1
+//  }
+
+//  console.log(strStr(haystack,needle))
