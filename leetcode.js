@@ -378,5 +378,39 @@
 // console.log(researchArr(arr,target))
 
  
+//递归数组求和
 
- 
+// var arr = [1,2,3,4]
+// var result = 0
+
+// function sum(arr){
+//   var len = arr.length
+
+//   if(arr.length === 0){
+//     return 0
+//   } else if(arr.length === 1){
+//     return arr[0]
+//   }else {
+//     return arr[0] + sum(arr.slice(1))
+//   }
+  
+// }
+// console.log(sum(arr))
+
+//递归求数组元素个数
+// var arr = [1,2,3,4]
+// var result = 0
+
+// function sum(arr){
+//   var len = arr.length
+
+//   if(arr.length === 0){
+//     return 0
+//   } else if(arr.length === 1){
+//     return 1
+//   }else {
+//     return 1 + sum(arr.slice(1))
+//   }
+  
+// }
+// console.log(sum(arr))
