@@ -414,3 +414,30 @@
   
 // }
 // console.log(sum(arr))
+
+//归并排序  递归  分治的思想  将大数组分解成小数组  直至数组元素之间可直接比较，再比较进行数组合成  效率比冒泡  选择  要高
+
+var arr = [8,7,6,5,4,3,2,1]
+
+function mergeSort(arr){
+  if(arr.length > 1){
+    var len = arr.length
+    var mid = Math.floor(len/2)
+    var left = mergeSort(arr.slice(0,mid))
+    var right = mergeSort(arr.slice(mid,len))
+    arr = merge(left,right)
+  }
+  return arr
+}
+
+function merge(left,right){
+  var i = 0
+  var j = 0;
+  var result = []
+  while(i<left.length && j<right.length){
+    result.push(left[i]>right[j]?right[j++]:left[i++])
+  }
+  return result.concat(i<left.length? left.slice(i):right.slice(j))
+}
+
+console.log(mergeSort(arr))
