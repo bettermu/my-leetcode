@@ -445,25 +445,61 @@
 
 //快速排序
 
-var arr = [8,7,6,5,4,3,2,1]
+// var arr = [8,7,6,5,4,3,2,1]
 
-function quickSort(arr){
+// function quickSort(arr){
   
-  if(arr.length>1){
-    var mid = arr.splice(Math.floor(arr.length/2),1)
-    var len = arr.length
-    var left = []
-    var right = []
-    for(var i=0;i<len;i++){
-      if(arr[i]<=mid){
-        left.push(arr[i])
-      }else if (arr[i]>mid){
-        right.push(arr[i])
-      }
-    }
-    return quickSort(left).concat(mid,quickSort(right))
-  }
-  return arr
-}
+//   if(arr.length>1){
+//     var mid = arr.splice(Math.floor(arr.length/2),1)
+//     var len = arr.length
+//     var left = []
+//     var right = []
+//     for(var i=0;i<len;i++){
+//       if(arr[i]<=mid){
+//         left.push(arr[i])
+//       }else if (arr[i]>mid){
+//         right.push(arr[i])
+//       }
+//     }
+//     return quickSort(left).concat(mid,quickSort(right))
+//   }
+//   return arr
+// }
 
-console.log(quickSort(arr))
+// console.log(quickSort(arr))
+
+
+/** 
+ * 058 最后一个单词的长度
+ * 
+ * */ 
+
+// var str = 'Hello World'
+// function lastWordLen(s){
+//   var str = s.replace(/(\s*$)/g,"")
+//   var arr = str.split(' ')
+//   return arr[arr.length - 1].length
+// }
+// console.log(lastWordLen(str))
+
+
+/**
+ * 066 加一算法
+ */
+
+//  var arr = [9,9,9,9]
+
+//  function addDigit(arr){
+//    for(var i=arr.length-1;i>=0;i--){
+//       arr[i]++
+//       arr[i] = arr[i] % 10 
+//       if(arr[i]>0){  //如果不需要进位 直接return  否则，取前一位继续+1
+//         return arr
+//       }
+
+//    }
+
+//    return [1].concat(arr)  //当所有位数上都是 0 时  则往前补1  比如  999 => 1000
+//  }
+
+//  console.log(addDigit(arr))
