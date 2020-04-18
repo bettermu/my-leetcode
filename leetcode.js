@@ -632,3 +632,53 @@
 // }
 
 // console.log(isSameTree(p,q))
+
+
+/**
+ *  101 对称二叉树判断
+ * 思路：与相同的二叉树类似，不过我们需要对左右两侧节点，分别进行字符串化，
+ * 不过与相同的节点不同的是，
+ * 我们需要对右侧节点进行左右颠倒的遍历
+ */
+
+// let root = {
+//   val: 1,
+//   left: {
+//     val: 2,
+//     left: { val: 3, left: null, right: null, },
+//     right: { val: 4, left: null, right: null, },
+//   },
+//   right: {
+//     val: 2,
+//     left: { val: 4, left: null, right: null, },
+//     right: { val: 3, left: null, right: null, }
+//   },
+// }
+
+// function isSymmetricTree(root){
+//   if(!root){
+//     return true
+//   }
+//   var leftTree = root.left
+//   var rightTree = root.right
+
+//   function leftSerialize(root){
+//     if(!root){
+//       return '!'
+//     }
+
+//     return root.val + '!' + leftSerialize(root.left) + '!' + leftSerialize(root.right)
+//   }
+
+//   function rightSerialize(root){
+//     if(!root){
+//       return '!'
+//     }
+//     // 关键的地方  需对右侧节点进行左右颠倒的遍历输出
+//     return root.val + '!' + rightSerialize(root.right) + '!' + rightSerialize(root.left)
+//   }
+
+//   return leftSerialize(leftTree) === rightSerialize(rightTree)
+// }
+
+// console.log(isSymmetricTree(root))
