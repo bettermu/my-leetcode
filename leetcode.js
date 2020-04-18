@@ -522,3 +522,96 @@
 //  }
 
 //  console.log(manyChairs(50))
+
+
+/** 
+ * 088 合并两个有序数组
+ */
+
+ //var arr1 = [2,4,6,8]
+ //var arr2 = [1,3,5,7,9]
+
+//  // sort方法
+//  function mergeArr(arr1,arr2){
+
+//    return [].concat(arr1,arr2).sort()
+//  }
+
+//  console.log(mergeArr(arr1,arr2))
+
+// 双指针解法
+
+// function merge(arr1,arr2){
+//   var count1 = 0
+//   var count2 = 0
+//   var len1= arr1.length
+//   var len2 = arr2.length
+//   var arr= []
+//   while(count1<len1 && count2<len2){
+//     if(arr1[count1]<arr2[count2]){
+//       arr.push(arr1[count1])
+//       count1++
+//     } else{
+//       arr.push(arr2[count2])
+//       count2++
+//     }
+//   }
+
+//   if(count1 < len1){
+//     arr = arr.concat(arr1.slice(count1,len1))
+//   }
+
+//   if(count2 < len2){
+//     arr = arr.concat(arr2.slice(count2,len2))
+//   }
+
+//   return arr
+// }
+
+// console.log(merge(arr1,arr2))
+
+/** 
+ * 100 相同的树，深度优先遍历
+ * 思路  深度优先  递归遍历  return 顺序结构的val字符串即可
+ */
+
+var p = {
+  val: 1,
+  left: {
+    val: 2,
+    left: null,
+    right: null,
+  },
+  right: {
+    val: 1,
+    left: null,
+    right: null,
+  },
+}
+
+var q = {
+  val: 1,
+  left: {
+    val: 1,
+    left: null,
+    right: null,
+  },
+  right: {
+    val: 2,
+    left: null,
+    right: null,
+  },
+}
+
+function isSameTree(p,q){
+  function serialize(root){
+    if(!root){
+      return '#'
+    }
+    return root.val + '!' + serialize(root.left) + '!' + serialize(root.right)
+  }
+
+  return serialize(p) === serialize(q)
+}
+
+console.log(isSameTree(p,q))
