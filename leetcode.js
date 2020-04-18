@@ -575,43 +575,60 @@
  * 思路  深度优先  递归遍历  return 顺序结构的val字符串即可
  */
 
-var p = {
-  val: 1,
-  left: {
-    val: 2,
-    left: null,
-    right: null,
-  },
-  right: {
-    val: 1,
-    left: null,
-    right: null,
-  },
-}
+// var p = {
+//   val: 1,
+//   left: {
+//     val: 2,
+//     left: null,
+//     right: null,
+//   },
+//   right: {
+//     val: 1,
+//     left: null,
+//     right: null,
+//   },
+// }
 
-var q = {
-  val: 1,
-  left: {
-    val: 1,
-    left: null,
-    right: null,
-  },
-  right: {
-    val: 2,
-    left: null,
-    right: null,
-  },
-}
+// var q = {
+//   val: 1,
+//   left: {
+//     val: 1,
+//     left: null,
+//     right: null,
+//   },
+//   right: {
+//     val: 2,
+//     left: null,
+//     right: null,
+//   },
+// }
 
-function isSameTree(p,q){
-  function serialize(root){
-    if(!root){
-      return '#'
-    }
-    return root.val + '!' + serialize(root.left) + '!' + serialize(root.right)
-  }
+// 字符串拼接解法
 
-  return serialize(p) === serialize(q)
-}
+// function isSameTree(p,q){
+//   function serialize(root){
+//     if(!root){
+//       return '#'
+//     }
+//     return root.val + '!' + serialize(root.left) + '!' + serialize(root.right)
+//   }
 
-console.log(isSameTree(p,q))
+//   return serialize(p) === serialize(q)
+// }
+
+// 常规 比较解法
+
+// function isSameTree(p,q){
+//   if(p === null && q === null){ //当两者都是Null时  相同
+//     return true
+//   }
+//   if(p === null || q=== null){ //一个为空  一个不为空  返回false
+//     return false
+//   }
+//   if(p.val !== q.val){ //如果根节点val值  
+//     return false   
+//   }
+//   return isSameTree(p.left,q.left) && isSameTree(p.right,q.right)
+// }
+
+// console.log(isSameTree(p,q))
