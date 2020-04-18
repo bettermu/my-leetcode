@@ -503,3 +503,22 @@
 //  }
 
 //  console.log(addDigit(arr))
+
+
+/**
+ * 070 爬楼梯  不用递归 递归有性能损耗
+ * 思路 利用数组进行缓存  每一项的值都等于前两项的和
+ */
+
+//  function manyChairs(n){
+//    if(n ===1 || n===2){
+//      return n
+//    }
+//    var memory = [1,2]
+//    for(var i=2;i<=n;i++){
+//      memory[i] = memory[i-1] + memory[i-2]
+//    }
+//    return memory[n]
+//  }
+
+//  console.log(manyChairs(50))
