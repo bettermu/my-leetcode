@@ -919,3 +919,31 @@
 // }
 
 // console.log(create(20))
+
+
+/**
+ * 
+ * 119 杨辉三角II 返回第 n 行的数组 n<=33
+ * 思路: 与上例类似，不过直接返回当前行的数组，无需做全局的缓存
+ */
+
+//  function getIndex(row){
+//    if(row === 1){
+//      return [[1]]
+//    }
+//    if(row === 2){
+//      return [1,1]
+//    }
+
+//    var prev = getIndex(row - 1)
+//    var result =[]
+//    for(var i=0;i<prev.length;i++){
+//      if(prev[i] && prev[i+1]){
+//        result.push(prev[i]+prev[i+1])
+//      }
+//    }
+//    result = [1,...result,1]
+//    return result
+//  }
+
+//  console.log(getIndex(5))
