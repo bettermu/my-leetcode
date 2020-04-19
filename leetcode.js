@@ -877,3 +877,45 @@
 // }
 
 // console.log(findMinPath(root,23))
+
+
+/**
+ * 118 杨辉三角
+ * 思路：两边是1 固定不变，将每一步的中间数组，计算出来，进行缓存，return结果 递归实现
+ * 当前数组是由前一步数组计算而来  
+ */
+
+// function create(rows){
+//   if(rows === 0){
+//     return 0
+//   }
+//   if(rows === 1){
+//     return [[1]]
+//   }
+  
+//   var fullResult = [
+//     [1],
+//     [1,1]
+//   ]
+
+//   function recursion(rows){
+//     if(rows === 2){
+//       return fullResult[1]
+//     }
+
+//     var prevArr = recursion(rows - 1)
+//     var result = []
+//     for(var i=0;i<prevArr.length;i++){
+//       if(prevArr[i] && prevArr[i+1]){
+//         result.push(prevArr[i]+prevArr[i+1])
+//       }
+//     }
+//     result = [1,...result,1]
+//     fullResult.push(result)
+//     return result
+//   }
+//   recursion(rows)
+//   return fullResult
+// }
+
+// console.log(create(20))
