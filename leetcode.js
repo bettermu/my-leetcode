@@ -947,3 +947,41 @@
 //  }
 
 //  console.log(getIndex(5))
+
+
+/**
+ * 121 买卖股票最佳时机 
+ */
+
+//var days = [7,1,5,3,6,4]
+
+//暴力破解法  双层循环，类似冒泡排序  复杂度O(n²)
+
+// function findMax(arr){
+//   var max = 0
+//   for(var i=0;i<arr.length-1;i++){
+//     for(var j = i+1;j<arr.length;j++){
+//       var temp = arr[j] - arr[i]
+//       if(temp > max){
+//         max = temp
+//       }
+//     }
+//   }
+//   return max
+// }
+
+// 机遇破解法  复杂度O(n)
+// function findMax(arr){
+//   var min = Number.MAX_VALUE
+//   var max = 0
+//   for(var i=0;i<arr.length;i++){
+//     if(arr[i]<min){
+//       min = arr[i]  //将最小值赋值
+//     }else if(arr[i] - min > max){
+//       max = arr[i] - min //如果利润比当前大 则置换
+//     }
+//   }
+//   return max
+// }
+
+// console.log(findMax(days))
