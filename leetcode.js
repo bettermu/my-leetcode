@@ -800,3 +800,36 @@
 // }
 
 // console.log(arrToTree(nums))
+
+
+
+/**
+ * 
+ * 111 二叉树的最小深度
+ * 思路 递归实现  终止条件  该节点为叶节点  直接return 0 
+ */
+
+//  var root = {
+//   val: 3,
+//   left: { val: 9, left: null, right: null },
+//   right: {
+//     val: 20,
+//     left: { val: 15, left: null, right: null },
+//     right: { val: 7, left: null, right: null },
+//   },
+// }
+
+// function minDepth(root){
+//   if(!root){
+//     return 0
+//   }
+//   if(!root.left){
+//     return minDepth(root.right)+1
+//   }
+//   if(!root.right){
+//     return minDepth(root.left)+1
+//   }
+//   return Math.min(minDepth(root.left),minDepth(root.right))+1
+// }
+
+// console.log(minDepth(root))
