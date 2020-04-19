@@ -985,3 +985,18 @@
 // }
 
 // console.log(findMax(days))
+
+/**
+ * 125 验证回文字符串
+ * 思路：使用正则替换掉除了数字字母以外的内容，再统一字母大小写，通过字符串数组的方法来验证
+ */
+
+//  var str = 'A man, a plan, a canal: Panama'
+
+//  function isRepeat(str){
+//    str = str.replace(/[^A-Za-z0-9]/g,'').toLocaleLowerCase()
+//    var rStr = str.split('').reverse().join('')
+//    return str === rStr
+//  }
+
+//  console.log(isRepeat(str))
