@@ -682,3 +682,121 @@
 // }
 
 // console.log(isSymmetricTree(root))
+
+
+
+/**
+ * 104 二叉树的最大深度
+ * 思路：每次遍历  当前深度值与 缓存的最大深度值 比较，如果前者大于后者，则置换
+ */
+
+// let root = {
+//   val: 3,
+//   left: { val: 9, left: null, right: null, },
+//   right: {
+//     val: 20,
+//     left: { val: 15, left: null, right: null },
+//     right: { val: 7, left: null, right: null },
+//   },
+// }
+
+// function maxDeepth(root){
+//   if(!root){
+//     return 0
+//   }
+//   var longest = 1
+
+//   var find = function(root,depth){
+//     if(!root){
+//       return depth
+//     }
+//     if(root.left || root.right){
+//       depth +=1
+//       if(depth > longest){
+//         longest = depth
+//       }
+//       find(root.left,depth)
+//       find(root.right,depth)
+//     }
+//   }
+
+//   find(root,1)
+//   return longest
+
+// }
+
+// console.log(maxDeepth(root))
+
+
+
+
+/**
+ * 107 二叉树 层次遍历
+ */
+
+// let root = {
+//   val: 3,
+//   left: { val: 9, left: null, right: null, },
+//   right: {
+//     val: 20,
+//     left: { val: 15, left: null, right: null },
+//     right: { val: 7, left: null, right: null },
+//   },
+// };
+
+
+// function traversal(root){
+//   if(!root){
+//     return []
+//   }
+//   let result = []
+
+//   function find(root,depth){
+//     if(!root){
+//       return
+//     }
+//     if(root.val!==null){
+//       if(!result[depth]){
+//         result[depth] = []
+//       }
+//       result[depth] = [root.val,...result[depth]]
+//       depth +=1
+//       find(root.left,depth)
+//       find(root.right,depth)
+//     }
+//   }
+
+//   find(root,0)
+
+//   return result.reverse()
+// }
+
+// console.log(traversal(root))
+
+
+
+/**
+ * 108 有序数组 转换二叉树
+ * 思路：对数组二分，后序遍历
+ */
+
+// var nums = [-10, -3, 0, 1, 5, 9]
+
+// function arrToTree(arr){
+
+//   if(!arr.length){
+//     return null
+//   }
+
+//   var mid = Math.floor(arr.length/2)
+
+//   var root = {
+//     val:arr[mid],
+//     left:arrToTree(arr.slice(0,mid)),
+//     right:arrToTree(arr.slice(mid+1,arr.length))
+//   }
+//   return root
+
+// }
+
+// console.log(arrToTree(nums))
