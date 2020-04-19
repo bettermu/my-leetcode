@@ -833,3 +833,47 @@
 // }
 
 // console.log(minDepth(root))
+
+
+/**
+ * 
+ * 112 路径总和
+ * 思路 ：分治法，动态规划，后面路径节点的总和 一定是等于总和减去当前节点的val
+ */
+
+// const root = {
+//   val: 5,
+//   left: {
+//     val: 4,
+//     left: {
+//       val: 11,
+//       left: { val: 7, left: null, right: null },
+//       right: { val: 2, left: null, right: null },
+//     },
+//     right: null,
+//   },
+//   right: {
+//     val: 8,
+//     left: { val: 13, left: null, right: null },
+//     right: {
+//       val: 4,
+//       left: null,
+//       right: { val: 1, left: null, right: null },
+//     }
+//   }
+// }
+
+// function findMinPath(root,sum){
+//   if(!root){
+//     return false
+//   }
+//   sum = sum - root.val
+//   if(!root.left && !root.right){
+//     return sum === 0
+//   }
+
+//   return findMinPath(root.left,sum) || findMinPath(root.right,sum)  //左右只要有一条符合 便可
+
+// }
+
+// console.log(findMinPath(root,23))
