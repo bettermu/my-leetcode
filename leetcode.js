@@ -991,7 +991,9 @@
  * 思路：使用正则替换掉除了数字字母以外的内容，再统一字母大小写，通过字符串数组的方法来验证
  */
 
-//  var str = 'A man, a plan, a canal: Panama'
+ // JS api破解
+
+//var str = 'A man, a plan, a canal: Panama'
 
 //  function isRepeat(str){
 //    str = str.replace(/[^A-Za-z0-9]/g,'').toLocaleLowerCase()
@@ -1000,3 +1002,39 @@
 //  }
 
 //  console.log(isRepeat(str))
+
+//双指针破解
+
+// function isRepeat(str){
+//   str = str.replace(/[^a-zA-Z0-9]/g,'').toLocaleLowerCase()
+//   for(var i=0;i<str.length/2;i++){
+//     if(str[i]!==str[str.length-1-i]){
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+// console.log(isRepeat(str))
+
+
+/**
+ * 136 只出现一次的数字
+ * 思路：双指针
+ */
+
+//  var arr = [3,4,3,4,5,6,5,6,7,9,8,9,8]
+
+//  function findOnceNum(arr){
+//    arr.sort()
+//    for(var i=0;i<arr.length;i++){
+//      if(arr[i] === arr[i+1]){
+//        i++
+//      }else {
+//        return arr[i]
+//      }
+//    }
+//  }
+
+//  console.log(findOnceNum(arr))
+
