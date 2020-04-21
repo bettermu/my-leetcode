@@ -1038,3 +1038,87 @@
 
 //  console.log(findOnceNum(arr))
 
+
+/**
+ * 167 两数之和II
+ */
+//var arr = [2,7,11,13]
+//双重遍历
+
+//  function find(arr,target){
+//   for(var i=0;i<arr.length-1;i++){
+//     var left = target - arr[i]
+//     for(var j = i+1;j<arr.length;j++){
+//       if(arr[j]===left){
+//         return [i+1,j+1]
+//       }
+//     }
+//   }
+//   return []
+//  }
+
+// map解法
+// function find(arr,target){
+//   var map = new Map()
+//   for(var i=0;i<arr.length;i++){
+//     if(map.get(arr[i])!==undefined){
+//       return [map.get(arr[i]),i+1]
+//     }else {
+//       map.set(target - arr[i],i+1)
+//     }
+//   }
+//   return []
+// }
+
+//  console.log(find(arr,9))
+
+
+/**
+ * 168 excel表格名称
+ */
+
+//  let dict = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+//  'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+//  function coverTitle(n){
+//    let res = ''
+//    while(n!=0){
+//      n--;
+//      let c = n % 26
+//      res += dict[c]
+//      n = parseInt(n / 26)
+//    }
+//    return res
+//  }
+
+//  console.log(coverTitle(512))
+
+
+/**
+ * 169  求众数    
+ * 求一个数组中，元素出现次数超过该数组长度的一半的元素
+ * 思路  利用map对象进行元素次数缓存
+ */
+
+//  let arr = [1,1,2,2,2,2,1]
+
+//  function findMore(arr){
+//    var map = new Map()
+
+//    for(var i=0;i<arr.length;i++){
+//      if(map.get(arr[i]) !== undefined){
+//        map.set(arr[i],map.get(arr[i])+1)
+//        if(map.get(arr[i]) > arr.length / 2){
+//          return arr[i]
+//        }
+//      } else {
+//        map.set(arr[i],1)
+//        if(map.get(arr[i]) > arr.length / 2){  //这里预防数组长度为1的情况
+//         return arr[i]
+//       }
+//      }
+//    }
+//  }
+
+//  console.log(findMore(arr))
+
